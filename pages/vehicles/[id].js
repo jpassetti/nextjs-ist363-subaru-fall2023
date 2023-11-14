@@ -4,8 +4,9 @@ import { getVehicleBySlug, getAllVehicleSlugs } from '../../lib/api';
 // WATERFALL
 // 1. getStaticPaths
 export async function getStaticPaths() {
-    const pathsArr = getAllVehicleSlugs();
-    const paths = pathsArr.map((slug) => {
+    const vehicles = getAllVehicleSlugs();
+    const paths = vehicles.map((vehicle) => {
+        const { slug } = vehicle.node;
         return {
             params: {
                 id: slug
