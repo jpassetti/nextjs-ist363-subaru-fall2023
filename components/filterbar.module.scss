@@ -1,0 +1,27 @@
+.filterBar {
+   //background-color: skyblue;
+    &List {
+       //background-color: orange; 
+       display: flex;
+       justify-content: center;
+       gap: 1rem;
+       border-bottom: 1px solid black;
+       &Item {
+            //background-color: pink;
+            &Button {
+                background-color: white;
+                border: 0;
+                padding: 1rem 0;
+                font-family: Arial;
+                cursor: pointer;
+                transition: all .5s;
+                border-bottom: 5px solid white;
+                &.active {
+                    //background-color: red;
+                    border-bottom-color: blue;
+                    font-weight: bold;
+                }
+            }
+       }
+    }
+}

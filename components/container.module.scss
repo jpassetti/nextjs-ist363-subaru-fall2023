@@ -1,3 +1,20 @@
+@use '../sass/abstracts/mixins';
+
 .container {
-    background-color: yellow;
+    //background-color: yellow;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+    @include mixins.breakpoint(tablet) {
+        //background-color: orange;
+        width: 700px;
+    }
+    @include mixins.breakpoint(laptop) {
+        //background-color: red;
+        width: 980px;
+    }
+    @include mixins.breakpoint(desktop) {
+       // background-color: violet;
+        width: 1140px;
+    }
 }
